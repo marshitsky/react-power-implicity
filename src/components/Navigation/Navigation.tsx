@@ -1,5 +1,5 @@
 import { Button } from "../Button/Button";
-import "./style.scss";
+import "./navigation.scss";
 
 export const Navigation = () => {
   const navigationLogo =

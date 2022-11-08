@@ -1,4 +1,4 @@
-import "./style.scss";
+import "./slider.scss";
 import { Button } from "../Button/Button";
 
 export const Slider = () => {
