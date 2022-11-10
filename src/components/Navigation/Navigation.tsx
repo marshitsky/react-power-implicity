@@ -1,9 +1,8 @@
 import { Button } from "../Button/Button";
 import "./navigation.scss";
+import { ReactComponent as LogoIcon } from "../assets/icons/apple-logo.svg";
 
 export const Navigation = () => {
-  const navigationLogo =
-    "https://raw.githubusercontent.com/marshitsky/imgsForDiplomaJS/0a78e2bb614df0b2bd3b09fbe1f3522f81bc8140/logo-pi.svg";
   const navButtons = [
     {
       link: "",
@@ -19,25 +18,23 @@ export const Navigation = () => {
     },
   ];
   return (
-    <div className="navigation">
-      <img src={navigationLogo} alt="navigation logo " />
-      <div className="navigation--nav">
-        <ul className="navigation--nav--list">
-          {navButtons.map(({ link, label }) => {
-            return (
-              <li className="navigation--nav--list--item">
-                <a href={link}>{label}</a>
-              </li>
-            );
-          })}
-        </ul>
+    <header className="header">
+      <LogoIcon className="header__link-logo" />
+      <nav className="header__nav">
+        {navButtons.map(({ link, label }) => {
+          return (
+            <a href={link} className="header__nav-link" key={label}>
+              {label}
+            </a>
+          );
+        })}
+      </nav>
+      <Button variant="header">Download for free</Button>
+      <div className="haeder__burger">
+        <p className="haeder__burger-line"></p>
+        <p className="haeder__burger-line"></p>
+        <p className="haeder__burger-line"></p>
       </div>
-      <Button parent="navigation">Download for free</Button>
-      <div className="navigation--nav--burger">
-        <p className="navigation--nav--burger--line"></p>
-        <p className="navigation--nav--burger--line"></p>
-        <p className="navigation--nav--burger--line"></p>
-      </div>
-    </div>
+    </header>
   );
 };
