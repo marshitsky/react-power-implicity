@@ -1,11 +1,11 @@
-export interface IButtonProps {
-  children: React.ReactNode;
-  parent: string;
+export interface IProps {
+  children: string;
+  variant: string;
 }
 
-export const Button: React.FC<IButtonProps> = ({ children, parent = "" }) => {
+export const Button = ({ variant, children }: IProps) => {
   return (
-    <button className={`${parent}-btn`} type="button">
+    <button className={`${variant}__btn`} type="button">
       {children}
     </button>
   );
