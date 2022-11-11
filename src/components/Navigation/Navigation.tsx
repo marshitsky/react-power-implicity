@@ -1,9 +1,10 @@
 import { Button } from "../Button/Button";
 import "./navigation.scss";
-import { ReactComponent as LogoIcon } from "../../assets/icons/apple-logo.svg";
+import { ReactComponent as LogoIcon } from "../assets/icons/apple-logo.svg";
+import { Twirl } from "hamburger-react";
 
 export const Navigation = () => {
-  const navButtons = [
+  const navigationLinks = [
     {
       link: "",
       label: "Features",
@@ -21,7 +22,7 @@ export const Navigation = () => {
     <header className="header">
       <LogoIcon className="header__link-logo" />
       <nav className="header__nav">
-        {navButtons.map(({ link, label }) => {
+        {navigationLinks.map(({ link, label }) => {
           return (
             <a href={link} className="header__nav-link" key={label}>
               {label}
@@ -30,11 +31,7 @@ export const Navigation = () => {
         })}
       </nav>
       <Button variant="header">Download for free</Button>
-      <div className="haeder__burger">
-        <p className="haeder__burger-line"></p>
-        <p className="haeder__burger-line"></p>
-        <p className="haeder__burger-line"></p>
-      </div>
+      <Twirl color="#A0A3A7" size={43} rounded />
     </header>
   );
 };

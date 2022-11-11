@@ -12,13 +12,13 @@ export const Slider = () => {
         </p>
         <Button variant="slider">Learn</Button>
       </div>
-      <div className="slider__dots">
+      <ul className="slider__dots">
         <li className="slider__dot"></li>
         <li className="slider__dot"></li>
         <li className="slider__dot slider__dot--active"></li>
         <li className="slider__dot"></li>
         <li className="slider__dot"></li>
-      </div>
+      </ul>
     </div>
   );
 };
