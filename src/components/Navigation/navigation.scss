@@ -30,19 +30,8 @@
         justify-self: right;
         cursor: pointer;
     }
-    .haeder__burger {
-        width: 43px;
-        height: 43px;
+    .hamburger-react {
         display: none;
-        grid-template-rows: repeat(3, 1fr);
-        align-items: center;
-        justify-self: end;
-        .haeder__burger-line {
-            border-radius: 20px;
-            width: 43px;
-            height: 5px;
-            background: #A0A3A7;
-        }
     }
 }
 
@@ -78,8 +67,8 @@
             margin: 0 5px;
             justify-self: center;
         }
-        .haeder__burger {
-            display: grid;
+        .hamburger-react {
+            display: block;
         }
     }
 }
