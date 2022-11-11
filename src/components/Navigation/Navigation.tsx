@@ -2,6 +2,7 @@ import { Button } from "../Button/Button";
 import "./navigation.scss";
 import { ReactComponent as LogoIcon } from "../assets/icons/apple-logo.svg";
 import { Twirl } from "hamburger-react";
+import { ReactComponent as LogoIcon } from "../../assets/icons/apple-logo.svg";
 
 export const Navigation = () => {
   const navigationLinks = [
